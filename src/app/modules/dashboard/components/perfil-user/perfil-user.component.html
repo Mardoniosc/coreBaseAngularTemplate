@@ -1,1 +1,29 @@
-<p>perfil-user works!</p>
+<body>
+  <form>
+    <div class="imagem-avatar">
+      <label for="avatar">
+        <img src="{{ imgUser }}" alt="" />
+        <input
+          class="input-image"
+          type="file"
+          id="avatar"
+          name="avatar"
+          accept="image/*"
+          (change)="guardarImagem($event)"
+        >
+      </label>
+    </div>
+
+    <input type="text" placeholder="Nome Completo">
+    <input type="text" placeholder="Seu endereço de E-mail">
+
+    <hr>
+
+    <input type="password" name="oldpassword" placeholder="Sua senha atual">
+    <input type="password" name="newpassword" placeholder="Sua nova senha">
+    <input type="password" name="confirmpassword" placeholder="Confirmação de senha">
+
+    <button type="button" (click)="atualizarPerfil()">Atualizar perfil</button>
+  </form>
+  <button class="button-sair" type="button" [routerLink]="['/']" routerLinkActive="router-link-active" >Sair do Sistema</button>
+</body>

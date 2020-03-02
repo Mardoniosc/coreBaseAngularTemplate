@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilUserComponent implements OnInit {
 
+  imgUser = "../../../../../assets/admin.png"
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  atualizarPerfil(){
+    alert('Perfil Atualizado')
+  }
+
+  guardarImagem(event){
+    const file = event.target.files[0]
+    console.log(file)
+  }
 }
