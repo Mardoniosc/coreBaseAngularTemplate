@@ -1,0 +1,6 @@
+export * from './autenticacao'
+export * from './dashboard'
+export * from './perfil'
+export * from './permissao'
+export * from './usuario'
+export * from './shared'
